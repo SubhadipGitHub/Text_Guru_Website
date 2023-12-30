@@ -1,0 +1,5 @@
+textblob
+spacy
+emoji
+pandas
+flask

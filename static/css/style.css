@@ -1,0 +1,111 @@
+/* Add these styles to your existing styles */
+
+.glassy-section {
+    max-width: 800px; /* Adjust the max-width value as needed */
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 600px) {
+    .glassy-section {
+        max-width: 90%;
+    }
+}
+
+.info-section {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.meter-container {
+    position: relative;
+}
+
+.water-box {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    margin: 20px auto;
+}
+
+.water {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(52, 152, 219, 0.5), rgba(52, 152, 219, 0.8));
+    animation: wave 2s infinite;
+}
+
+@keyframes wave {
+    0%, 100% {
+        transform: skewY(0deg);
+    }
+    50% {
+        transform: skewY(20deg);
+    }
+}
+
+.percentage {
+    font-size: 2em;
+    font-weight: bold;
+    color: #333;
+}
+
+
+
+.info-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.info-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.info-section li {
+    display: inline-block;
+    margin: 5px;
+}
+
+iframe {
+    opacity: 0.65; /* Adjust the opacity value as needed (0.0 to 1.0) */
+}
+
+#chatSliderContainer {
+    width: 50%; /* Adjust the width as needed */
+}
+
+#chatSlider {
+    background-size: stretch;
+    background-position: center;
+    background: rgba(1, 53, 54, 0.9);    
+    background-repeat: no-repeat;
+    padding: 20px; /* Adjust padding as needed */
+    border-radius: 15px;
+    width: 100%;
+}
+
+/* Increase font size */
+#chatSlider div {
+    font-size: 18px; /* Adjust the font size as needed */
+    color: #fff; /* Text color for better contrast */
+}
+
+.slick-prev:before, .slick-next:before {
+    color: black;
+}
+
+
+
