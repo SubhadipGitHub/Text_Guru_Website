@@ -145,11 +145,16 @@ def index():
                 # Add more chat moments
             ]
             ran_chat = extract_random_chat(file_path)
-            #print(ran_chat)
+            print(ran_chat)
 
             return render_template('result.html', overall_sentiment=overall_sentiment, sentiment_result=sentiment_result,overall_sentiment_percentage=overall_sentiment,chat_info=chat_info,random_chat_moments=ran_chat)
 
     return render_template('index.html', error=None)
+
+# About route
+@app.route('/about')
+def about():
+    return render_template('about.html')
 
 def date_time(s):
     pattern = '^([0-9]+)(\/)([0-9]+)(\/)([0-9]+), ([0-9]+):([0-9]+)[ ]?(AM|PM|am|pm)? -'
