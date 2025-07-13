@@ -1,5 +1,3 @@
-textblob
-spacy
-emoji
+streamlit
 pandas
-flask
+plotly

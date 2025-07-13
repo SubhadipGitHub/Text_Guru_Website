@@ -1,83 +1,107 @@
 
-# Text_Guru_Website
 
-This is a small flask application that takes the whatsapp chat export as data to analyze the sentiments of the conversation as well as give some interesting highlight.In future want to add more complex models to do an accurate emotional and relationship index of the conversations
+# 💬 WhatsApp Chat Analyzer
 
+<p align="center">
+  <img src="https://img.shields.io/badge/Streamlit-%E2%9C%A8%20App-ff4b4b?logo=streamlit" />
+  <img src="https://img.shields.io/badge/Python-3.8+-blue?logo=python" />
+  <img src="https://img.shields.io/badge/License-MIT-green" />
+  <img src="https://img.shields.io/badge/PRs-Welcome-brightgreen" />
+</p>
 
-## Demo & Screenshots
+> A beautiful Streamlit app to analyze WhatsApp chat exports, visualize activity, and get relationship insights with a modern UI.
 
-Home Screen
-![App Screenshot](https://i.imgur.com/v7fj3WK.png)
+---
 
-User needs to export whatsapp chat and upload it.
+## ✨ Features
+- 📤 Upload WhatsApp chat `.txt` or `.zip` files
+- 📊 See chat statistics (messages, participants, top chatter, etc.)
+- 📈 Interactive visualizations (sender, hour, weekday)
+- 👥 Chatter details: who talks most, first/last message, per-sender word stats
+- ✨ Chatter characteristics: most common words, bigrams, trigrams, top words per sender
+- 📝 Human summary: message balance, emoji use, activity, frequent topics
+- 🖼️ Modern UI: sidebar help, color gradients, icons, and info
+- 🔒 All analysis is local and private
 
-Result Screen
-![App Screenshot](https://i.imgur.com/6zZ2RDp.png)
+---
 
-Result and Insights are seen on this screen.
+## 🖥️ UI Preview
+<p align="center">
+  <img src="assets/screenshot_main.png" width="700" alt="Main UI" />
+  <br>
+  <img src="assets/screenshot_stats.png" width="700" alt="Stats UI" />
+</p>
 
+---
 
-
-## Installation
-
-Deploy my project in Cloud using Docker
-
-```bash
-Build Docker Image
-docker build -t python-docker . 
-
-Run docker container from image
-docker container run -dit -p 443:443 python-docker
-
-Delete all image,container and volumes
-docker system prune -a --volumes
+## 📁 Project Structure
+```
+whatsapp-analyzer/
+│
+├── app.py
+├── requirements.txt
+├── README.md
+├── utils/
+│   ├── parser.py
+│   └── analyzer.py
+├── assets/
+│   ├── sample_chat.txt
+│   ├── screenshot_main.png
+│   └── screenshot_stats.png
 ```
 
-Run locally
+---
 
-```bash
-Conda create a virtual environment
-conda create -n myenv python=3.9
+## 🚀 Getting Started
+1. **Install dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+2. **Run the app locally:**
+   ```bash
+   streamlit run app.py
+   ```
+3. **Upload a WhatsApp chat `.txt` or `.zip` file** to explore stats and charts.
 
-Activate conda environment
-conda activate myenv
+---
 
-Install requirements packages
-pip install -r requirements.txt 
+## ☁️ Deploy to Streamlit Cloud
 
-Run app.py
-python app.py
-```
+1. [Sign up for Streamlit Cloud](https://streamlit.io/cloud)
+2. Fork or upload this repo to your GitHub
+3. In Streamlit Cloud, click **New app** and select your repo
+4. Set the main file path to `app.py` and deploy!
 
-## Roadmap
+---
 
-- Add more complex sentiment models and make the outputs more meaningfull about personality traits and the type of person
+## 🆘 How to Export WhatsApp Chat
+- In WhatsApp, open the chat you want to export.
+- Tap the three dots > More > Export chat.
+- Choose **Without Media** for best results.
+- Save the `.txt` file and upload it to the app.
 
-- Add more integrations with SQL database to give the personality traits from multiple conversation for a profile
+---
 
-- Add sign in and profile pages and also add a social integration
+## 🧾 Sample Chat
+A sample chat file is provided in `assets/sample_chat.txt` for testing.
 
+---
 
-## License
+## 🛠️ Tech Stack
+- Python 3.8+
+- Streamlit
+- Pandas, NLTK
+- Plotly
 
-MIT License
+---
 
-Copyright (c) [2023] [Subhadip Dutta]
+## 📦 Optional Future Additions
+- Sentiment analysis
+- Emoji and word clouds
+- PDF report export
+- GPT-based recommendations
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+---
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+## ❤️ Credits
+Made with [Streamlit](https://streamlit.io/) and open-source libraries.
